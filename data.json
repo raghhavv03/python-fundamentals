@@ -1,0 +1,11 @@
+{
+    "name": "raghav",
+    "isStudent": true,
+    "age": 20,
+    "subjects": ["math", "physics", "chemistry"],
+    "marks": {
+        "math": 90,
+        "physics": 80,
+        "chemistry": 70
+    }
+}
