@@ -1,39 +1,39 @@
 # file operations
-f = open("python-fundamentals/sample1.txt", "r") # open the file in read mode
+f = open("python-fundamentals/sample-1.txt", "r") # open the file in read mode
 print(f.readline()) # read the file line by line and pointer moves to the next line
 print(f.read()) # read the file
 f.close() # close the file
 
-f = open("python-fundamentals/sample1.txt", "w") # open the file in write mode and overwrite the file
+f = open("python-fundamentals/sample-1.txt", "w") # open the file in write mode and overwrite the file
 f.write("hello world\n") # write to the file
 f.close() # close the file
 
-f = open("python-fundamentals/sample1.txt", "a") # open the file in append mode and add to the end of the file
+f = open("python-fundamentals/sample-1.txt", "a") # open the file in append mode and add to the end of the file
 f.write("appending to the file\n") # write to the file
 f.close() # close the file
 
-f = open("python-fundamentals/sample2.txt", "x") # create a new file if it doesn't exist
+f = open("python-fundamentals/sample-2.txt", "x") # create a new file if it doesn't exist
 f.write("hello world\n") # write to the file
 f.close() # close the file
 
-f = open("python-fundamentals/sample3.txt", "r+") # open the file in read and write mode
+f = open("python-fundamentals/sample-3.txt", "r+") # open the file in read and write mode
 f.write("123\n") # write to the file
 print(f.read()) # read the file
 f.close() 
 
-f = open("python-fundamentals/sample3.txt", "a+") # open the file in append and read mode
+f = open("python-fundamentals/sample-3.txt", "a+") # open the file in append and read mode
 f.write("123\n") # write to the file
 print(f.read()) # read the file
 f.close()
 
-f = open("python-fundamentals/sample3.txt", "w+") # open the file in write and read mode
+f = open("python-fundamentals/sample-3.txt", "w+") # open the file in write and read mode
 f.write("hello world\n") # write to the file
 print(f.read()) # read the file
 f.close() 
 
 # with keyword
 # files are automatically closed when the block is exited
-with open("python-fundamentals/sample1.txt", "r") as f:
+with open("python-fundamentals/sample-1.txt", "r") as f:
     print(f.readline()) 
     data = f.read()
     print(len(data))
@@ -41,7 +41,7 @@ with open("python-fundamentals/sample1.txt", "r") as f:
 # delete a file
 import os
 
-os.remove("python-fundamentals/sample1.txt")
+os.remove("python-fundamentals/sample-1.txt")
 print("file deleted")
 
 # word search
