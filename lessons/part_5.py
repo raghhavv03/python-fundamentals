@@ -1,39 +1,39 @@
 # file operations
-f = open("python-fundamentals/sample-1.txt", "r") # open the file in read mode
+f = open("data/sample_1.txt", "r") # open the file in read mode
 print(f.readline()) # read the file line by line and pointer moves to the next line
 print(f.read()) # read the file
 f.close() # close the file
 
-f = open("python-fundamentals/sample-1.txt", "w") # open the file in write mode and overwrite the file
+f = open("data/sample_1.txt", "w") # open the file in write mode and overwrite the file
 f.write("hello world\n") # write to the file
 f.close() # close the file
 
-f = open("python-fundamentals/sample-1.txt", "a") # open the file in append mode and add to the end of the file
+f = open("data/sample_1.txt", "a") # open the file in append mode and add to the end of the file
 f.write("appending to the file\n") # write to the file
 f.close() # close the file
 
-f = open("python-fundamentals/sample-2.txt", "x") # create a new file if it doesn't exist
+f = open("data/sample_2.txt", "x") # create a new file if it doesn't exist
 f.write("hello world\n") # write to the file
 f.close() # close the file
 
-f = open("python-fundamentals/sample-3.txt", "r+") # open the file in read and write mode
+f = open("data/sample_3.txt", "r+") # open the file in read and write mode
 f.write("123\n") # write to the file
 print(f.read()) # read the file
 f.close() 
 
-f = open("python-fundamentals/sample-3.txt", "a+") # open the file in append and read mode
+f = open("data/sample_3.txt", "a+") # open the file in append and read mode
 f.write("123\n") # write to the file
 print(f.read()) # read the file
 f.close()
 
-f = open("python-fundamentals/sample-3.txt", "w+") # open the file in write and read mode
+f = open("data/sample_3.txt", "w+") # open the file in write and read mode
 f.write("hello world\n") # write to the file
 print(f.read()) # read the file
 f.close() 
 
 # with keyword
 # files are automatically closed when the block is exited
-with open("python-fundamentals/sample-1.txt", "r") as f:
+with open("data/sample_1.txt", "r") as f:
     print(f.readline()) 
     data = f.read()
     print(len(data))
@@ -41,13 +41,13 @@ with open("python-fundamentals/sample-1.txt", "r") as f:
 # delete a file
 import os
 
-os.remove("python-fundamentals/sample-1.txt")
+os.remove("data/sample_1.txt")
 print("file deleted")
 
 # word search
 data = True
 count = 1
-with open("python-fundamentals/word-search.txt", "r") as f:
+with open("data/word_search.txt", "r") as f:
     while data:
         data = f.readline()
         if "python" in data.lower():
@@ -109,13 +109,13 @@ print(type(json_str))
 print(json_str)
 
 # files
-with open("python-fundamentals/data.json", "r") as f:
+with open("data/data.json", "r") as f:
     py_obj = json.load(f) # load method is used to load the json data from a file into a python object
     print(type(py_obj))
     print(py_obj)
 
 # write json data to a file
-with open("python-fundamentals/data.json", "w") as f:
+with open("data/data.json", "w") as f:
     json.dump(py_obj, f, indent = 4, ) # dump method is used to write the json data to a file, indent is used to format the json data
 
 
