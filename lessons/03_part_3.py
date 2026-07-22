@@ -130,7 +130,7 @@ info = [
     ("Bob", "Physics"),
     ("Charlie", "Chemistry"),
     ("David", "Math"),
-    ("Eve", "Physics")
+    ("Eve", "Physics"),
     ("Alice", "Chemistry"),
     ("Eve", "Math"),
     ("Charlie", "Math"),
