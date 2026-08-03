@@ -1,133 +1,131 @@
-# file operations
-f = open("data/sample_1.txt", "r") # open the file in read mode
-print(f.readline()) # read the file line by line and pointer moves to the next line
-print(f.read()) # read the file
-f.close() # close the file
+import json
+import os
 
-f = open("data/sample_1.txt", "w") # open the file in write mode and overwrite the file
-f.write("hello world\n") # write to the file
-f.close() # close the file
 
-f = open("data/sample_1.txt", "a") # open the file in append mode and add to the end of the file
-f.write("appending to the file\n") # write to the file
-f.close() # close the file
+# File operations
+f = open("data/sample_1.txt", "r")  # Open the file in read mode
+print(f.readline())  # Read the file line by line and pointer moves to the next line
+print(f.read())  # Read the file
+f.close()  # Close the file
 
-f = open("data/sample_2.txt", "x") # create a new file if it doesn't exist
-f.write("hello world\n") # write to the file
-f.close() # close the file
+f = open("data/sample_1.txt", "w")  # Open the file in write mode and overwrite the file
+f.write("hello world\n")  # Write to the file
+f.close()  # Close the file
 
-f = open("data/sample_3.txt", "r+") # open the file in read and write mode
-f.write("123\n") # write to the file
-print(f.read()) # read the file
-f.close() 
+f = open(
+    "data/sample_1.txt", "a"
+)  # Open the file in append mode and add to the end of the file
+f.write("appending to the file\n")  # Write to the file
+f.close()  # Close the file
 
-f = open("data/sample_3.txt", "a+") # open the file in append and read mode
-f.write("123\n") # write to the file
-print(f.read()) # read the file
+f = open("data/sample_2.txt", "x")  # Create a new file if it doesn't exist
+f.write("hello world\n")  # Write to the file
+f.close()  # Close the file
+
+f = open("data/sample_3.txt", "r+")  # Open the file in read and write mode
+f.write("123\n")  # Write to the file
+print(f.read())  # Read the file
 f.close()
 
-f = open("data/sample_3.txt", "w+") # open the file in write and read mode
-f.write("hello world\n") # write to the file
-print(f.read()) # read the file
-f.close() 
+f = open("data/sample_3.txt", "a+")  # Open the file in append and read mode
+f.write("123\n")  # Write to the file
+print(f.read())  # Read the file
+f.close()
 
-# with keyword
-# files are automatically closed when the block is exited
+f = open("data/sample_3.txt", "w+")  # Open the file in write and read mode
+f.write("hello world\n")  # Write to the file
+print(f.read())  # Read the file
+f.close()
+
+# With keyword
+# Files are automatically closed when the block is exited
 with open("data/sample_1.txt", "r") as f:
-    print(f.readline()) 
+    print(f.readline())
     data = f.read()
     print(len(data))
 
-# delete a file
-import os
-
+# Delete a file
 os.remove("data/sample_1.txt")
-print("file deleted")
+print("File deleted")
 
-# word search
+# Word search
 data = True
 count = 1
 with open("data/word_search.txt", "r") as f:
     while data:
         data = f.readline()
         if "python" in data.lower():
-            print(f"python is found at line {count}")
+            print(f"Python is found at line {count}")
             break
         count += 1
 
-# exception handling
-try: # try block to test a block of code for errors
-    x = int(input("enter a number: "))
+# Exception handling
+try:  # Try block to test a block of code for errors
+    x = int(input("Enter a number: "))
     ans = 100 / x
 
-except ZeroDivisionError: # exception handler for zero division error
-    print("division by zero is not allowed")
+except ZeroDivisionError:  # Exception handler for zero division error
+    print("Division by zero is not allowed.")
 
-except ValueError: # exception handler for value error
-    print("invalid input")
+except ValueError:  # Exception handler for value error
+    print("Invalid input.")
 
-else: # else block to execute if no error is raised
-    print(f'answer is {ans}')
+else:  # Else block to execute if no error is raised
+    print(f"Answer is {ans}")
 
-finally: # finally block to execute after try and except blocks
-    print("thank you for using the calculator")
+finally:  # Finally block to execute after try and except blocks
+    print("Thank you for using the calculator.")
 
-# list comprehension
-# list comprehension is a more concise way to create a new list
+# List comprehension
+# List comprehension is a more concise way to create a new list
 list1 = []
-for i in range (1, 11):
+for i in range(1, 11):
     if i % 2 == 0:
         list1.append(i * i)
 print(list1)
 
-# using list comprehension
-list2 = [i * i for i in range (1, 11) if i % 2 == 0]
+# Using list comprehension
+list2 = [i * i for i in range(1, 11) if i % 2 == 0]
 print(list2)
 
 list3 = [-1, 3, 7, -6, 5]
-list3 = [0 if i < 0 else i for i in list3] # replace negative numbers with 0
+list3 = [0 if i < 0 else i for i in list3]  # Replace negative numbers with 0
 print(list3)
 
 list4 = ["hello", "world", "python", "java", "c++"]
-list4 = [word.upper() for word in list4] # convert all words to uppercase
+list4 = [word.upper() for word in list4]  # Convert all words to uppercase
 print(list4)
 
-# json module
-import json 
+# JSON module
+json_str = '{"name": "raghav", "isStudent": true, "age": 20, "subjects": ["math", "physics", "chemistry"], "marks": {"math": 90, "physics": 80, "chemistry": 70}}'  # This is a JSON string
+print(type(json_str))  # JSON string is a string
 
-json_str = '{"name": "raghav", "isStudent": true, "age": 20, "subjects": ["math", "physics", "chemistry"], "marks": {"math": 90, "physics": 80, "chemistry": 70}}' # this is a json string
-print(type(json_str)) # json string is a string
-
-# convert json string to python object
-py_obj = json.loads(json_str) # loads method is used to load the json string into a python object
-print(type(py_obj)) # python object is a dictionary
+# Convert JSON string to Python object
+py_obj = json.loads(
+    json_str
+)  # Loads method is used to load the JSON string into a Python object
+print(type(py_obj))  # Python object is a dictionary
 print(py_obj)
 
-# convert python object to json string
-json_str = json.dumps(py_obj) # dumps method is used to convert the python object into a json string
-print(type(json_str)) 
+# Convert Python object to JSON string
+json_str = json.dumps(
+    py_obj
+)  # Dumps method is used to convert the Python object into a JSON string
+print(type(json_str))
 print(json_str)
 
-# files
+# Files
 with open("data/data.json", "r") as f:
-    py_obj = json.load(f) # load method is used to load the json data from a file into a python object
+    py_obj = json.load(
+        f
+    )  # Load method is used to load the JSON data from a file into a Python object
     print(type(py_obj))
     print(py_obj)
 
-# write json data to a file
+# Write JSON data to a file
 with open("data/data.json", "w") as f:
-    json.dump(py_obj, f, indent = 4, ) # dump method is used to write the json data to a file, indent is used to format the json data
-
-
-
-
-
-
-
-
- 
-
-
-
-    
-    
+    json.dump(
+        py_obj,
+        f,
+        indent=4,
+    )  # Dump method is used to write the JSON data to a file, indent is used to format the JSON data

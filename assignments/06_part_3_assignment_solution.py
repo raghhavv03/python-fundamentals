@@ -1,11 +1,11 @@
 # Q1
-string = input("enter a string: ")
+string = input("Enter a string: ")
 reversed_string = string[::-1]
 if string == reversed_string:
-    print("the string is a palindrome.")
-else:   
-    print("the string is not a palindrome.")
-# or
+    print("The string is a palindrome.")
+else:
+    print("The string is not a palindrome.")
+# Or
 i = 0
 j = len(string) - 1
 is_palindrome = True
@@ -16,9 +16,9 @@ while i < j:
     i += 1
     j -= 1
 if is_palindrome:
-    print("the string is a palindrome.")
+    print("The string is a palindrome.")
 else:
-    print("the string is not a palindrome.")
+    print("The string is not a palindrome.")
 
 # Q2
 list = [1, 2, 3, 4, 5]
@@ -26,14 +26,14 @@ sum = 0
 for num in list:
     sum += num
     average = sum / len(list)
-print(f"the average of the list is: {average}")
+print(f"The average of the list is: {average}")
 
 # Q3
 list1 = [1, 2, 7]
 list2 = [3, 4, 5]
 merged_list = list1 + list2
 merged_list.sort()
-print(f"the merged and sorted list is: {merged_list}")
+print(f"The merged and sorted list is: {merged_list}")
 
 # Q4
 tuple = (1, 2, 3, 4, 5)
@@ -44,36 +44,38 @@ for num in tuple:
         even_numbers.append(num)
     else:
         odd_numbers.append(num)
-print(f"the odd numbers in the tuple are: {odd_numbers}")
-print(f"the even numbers in the tuple are: {even_numbers}")
+print(f"The odd numbers in the tuple are: {odd_numbers}")
+print(f"The even numbers in the tuple are: {even_numbers}")
 
 # Q5
 students = {}
 while True:
-    char = input("enter a character (A, B, C, D, E): ")
-    if char == 'A':
-        student = input("enter the name of the student: ")
-        students[student] = 0 # initialize the marks of the student to 0
-    elif char == 'B':
-        student = input("enter the name of studemt whose marks you want to update: ")
+    char = input("Enter a character (A, B, C, D, E): ")
+    if char == "A":
+        student = input("Enter the name of the student: ")
+        students[student] = 0  # Initialize the student's marks to 0.
+    elif char == "B":
+        student = input("Enter the name of student whose marks you want to update: ")
         if student in students:
-            marks = int(input("enter new marks: "))
+            marks = int(input("Enter new marks: "))
             students[student] = marks
         else:
-            print("student not found")
-    elif char == 'C':
-        student = input("enter name of student who you want to search: ")
+            print("Student not found.")
+    elif char == "C":
+        student = input("Enter name of student who you want to search: ")
         if student in students:
-            print(f"{student} is present in the dictionary with marks {students[student]}")
+            print(
+                f"{student} is present in the dictionary with marks {students[student]}"
+            )
         else:
-            print(f"student not found")
-    elif char == 'D':
+            print("Student not found.")
+    elif char == "D":
         print(students)
-    elif char == 'E':
-        print("exiting program...")
+    elif char == "E":
+        print("Exiting program...")
         break
     else:
-        print("invalid character entered")
+        print("Invalid character entered.")
 
 # Q6
 words = ["apple", "banana", "cherry", "date", "elderberry"]
@@ -83,22 +85,22 @@ for word in words:
 print(word_length)
 
 # Q7
-input_string = input("enter a string: ")
+input_string = input("Enter a string: ")
 space_count = 0
 for char in input_string:
-    if char == ' ':
+    if char == " ":
         space_count += 1
-print(f"the number of spaces in the string is: {space_count}")
-# or
-space_count = input_string.count(' ')
-print(f"the number of spaces in the string is: {space_count}")
+print(f"The number of spaces in the string is: {space_count}")
+# Or
+space_count = input_string.count(" ")
+print(f"The number of spaces in the string is: {space_count}")
 
 # Q8
 list1 = [1, 2, 3, 4]
 list2 = [5, 6, 7, 8]
 common = set(list1).intersection(set(list2))
 if len(common) == 0:
-    print("The lists share no common elements")
+    print("The lists share no common elements.")
 else:
     print(f"Common elements: {common}")
 
@@ -109,10 +111,10 @@ for num in list1:
     if list1.count(num) > 1:
         duplicaties.add(num)
 print(duplicaties)
-# or
+# Or
 seen = set()
 duplicates = set()
-for num in list1: 
+for num in list1:
     if num in seen:
         duplicates.add(num)
     else:
@@ -120,18 +122,13 @@ for num in list1:
 print(duplicates)
 
 # Q10
-# print the unique characters in a string
-string = input("enter a string: ")
+# Print the unique characters in a string.
+string = input("Enter a string: ")
 unique_characters = set()
 for char in string:
     unique_characters.add(char)
 print(unique_characters)
 
-# print count of unique characters in a string
+# Print count of unique characters in a string.
 unique_characters_count = len(unique_characters)
-print(f"the number of unique characters in the string is: {unique_characters_count}")
-
-
-
-
-
+print(f"The number of unique characters in the string is: {unique_characters_count}")

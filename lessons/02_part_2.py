@@ -1,84 +1,84 @@
-# conditional statements
-# if 
+# Conditional statements
+# If
 age = 21
 if age >= 18:
-    print("you are an adult")
+    print("You are an adult")
 else:
-    print("you are a minor")
+    print("You are a minor")
 
-# if-elif-else
-color = input("enter a color: ")
+# If-elif-else
+color = input("Enter a color: ")
 if color == "red":
-    print("you like red")
+    print("You like red")
 elif color == "blue":
-    print("you like blue")
+    print("You like blue")
 else:
-    print("you like some other color")
+    print("You like some other color")
 
-# user authentication
-username = input("enter username: ")
-password = input("enter password: ")
+# User authentication
+username = input("Enter username: ")
+password = input("Enter password: ")
 if username == "admin" and password == "password123":
-    print("login successful")
+    print("Login successful")
 elif username != "admin":
-    print("invalid username")
+    print("Invalid username")
 else:
-    print("invalid password")
+    print("Invalid password")
 
-# odd or even
-num = int(input("enter a number: "))
+# Odd or even
+num = int(input("Enter a number: "))
 if num == 0:
-    print("zero is neither odd nor even")
+    print("Zero is neither odd nor even")
 elif num % 2 == 0:
-    print("the number is even")
+    print("The number is even")
 else:
-    print("the number is odd")
+    print("The number is odd")
 
-# nested if statements
-username = input("enter username: ")
-password = input("enter password: ")
+# Nested if statements
+username = input("Enter username: ")
+password = input("Enter password: ")
 if username == "admin" and password == "password123":
-    print("login successful")
+    print("Login successful")
 else:
     if username != "admin":
-        print("invalid username")
+        print("Invalid username")
     else:
-        print("invalid password")
+        print("Invalid password")
 
-# match case statement
-color = input("enter a color: ")
+# Match case statement
+color = input("Enter a color: ")
 match color:
     case "green":
-        print("go")
+        print("Go")
     case "yellow":
-        print("slow down")
+        print("Slow down")
     case "red":
-        print("stop")
+        print("Stop")
     case _:
-        print("invalid color")
+        print("Invalid color")
 
-# loops
-# while loop
+# Loops
+# While loop
 count = 1
 while count <= 5:
-    print("hello world")
+    print("Hello world")
     count += 1
 
-# print numbers from 5 to 1
+# Print numbers from 5 to 1
 i = 5
 while i >= 1:
     print(i)
     i -= 1
 
-# print table of any number
-num = int(input("enter a number: "))
+# Print table of any number
+num = int(input("Enter a number: "))
 i = 1
 while i <= 10:
     print(f"{num} x {i} = {num * i}")
     i += 1
 
-# break and continue
-# break
+# Break and continue
+# Break
 i = 1
 while i <= 10:
     if i == 5:
@@ -86,7 +86,7 @@ while i <= 10:
     print(i)
     i += 1
 
-# continue
+# Continue
 i = 1
 while i <= 10:
     if i % 3 == 0:
@@ -95,62 +95,71 @@ while i <= 10:
     print(i)
     i += 1
 
-# for loop
+# For loop
 string = "hello"
-for char in string: # in is the membership operator
+for char in string:  # 'in' is the membership operator.
     print(char)
 
-# in operator
+# In operator
 if "h" in string:
-    print("h is in the string")
-else: 
-    print("h is not in the string")
+    print("H is in the string")
+else:
+    print("H is not in the string")
 
-# print numbers from 1 to 10
-for i in range(1, 11): # we use the range function to generate a sequence of numbers
+# Print numbers from 1 to 10
+for i in range(1, 11):  # Generates a sequence of numbers from 1 to 10.
     print(i)
 
-# count number of vowels in a string
-string = input("enter a string: ")
+# Count number of vowels in a string
+string = input("Enter a string: ")
 vowels = "aeiouAEIOU"
 count = 0
 for char in string:
     if char in vowels:
         count += 1
-print(f"number of vowels in the string: {count}")
+print(f"Number of vowels in the string: {count}")
 
-# range with step
-for i in range(0, 20, 2): # this will print even numbers
+# Range with step
+for i in range(0, 20, 2):  # Prints even numbers.
     print(i)
 
-# sum of first n natural numbers
-n = int(input("enter a number: "))
+# Sum of first n natural numbers
+n = int(input("Enter a number: "))
 total = 0
 for i in range(1, n + 1):
     total += i
-print(f"sum of first {n} natural numbers: {total}")
+print(f"Sum of first {n} natural numbers: {total}")
 
-# functions
+
+# Functions
 def greet(name):
-    print(f"hello {name}")
-greet("alice") # alice is the argument passed to the function, it will be assigned to the parameter name
+    print(f"Hello {name}")
+
+
+greet("alice")  # "alice" is the argument passed to the function.
 greet("raghav")
 
-# calculate sum of two numbers
-def add(a, b = 1): # default value of b is 1
+
+# Calculate sum of two numbers
+def add(a, b=1):  # Default value of b is 1.
     return a + b
+
+
 result = add(5, 3)
 print(result)
 
-# lambda function
-square = lambda x: x ** 2
+# Lambda function
+square = lambda x: x**2
 print(square(5))
 
-# factorial of a number
+
+# Factorial of a number
 def factorial(n):
     if n == 0 or n == 1:
         return 1
     else:
-        return n * factorial(n - 1) # this is a recursive function, it calls itself until it reaches the base case
-num = int(input("enter a number: "))
-print(f"factorial of {num} is {factorial(num)}")
+        return n * factorial(n - 1)  # Recursive call until reaching the base case.
+
+
+num = int(input("Enter a number: "))
+print(f"Factorial of {num} is {factorial(num)}")

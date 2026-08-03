@@ -1,77 +1,77 @@
-print("hello world\n", "my name is raghav")
+print("Hello world\n", "My name is raghav")
 
-# variables
+# Variables
 name = "raghav"
 age = 20
 print(name, age)
-print("my name is:", name)
-print("my age is:", age - 5)
+print("My name is:", name)
+print("My age is:", age - 5)
 
-# data types
+# Data types
 isPrime = False
 print(type(name))
 print(type(age))
 print(type(isPrime))
 
-# sum of two numbers
+# Sum of two numbers
 num1 = 10
 num2 = 20
 sum = num1 + num2
 print(sum)
 
-# arithmetic operators
-print(num1 + num2) # addition
-print(num1 - num2) # subtraction
-print(num1 * num2) # multiplication
-print(num1 / num2) # division
-print(num1 % num2) # modulus
-print(num1 ** num2) # exponentiation
+# Arithmetic operators
+print(num1 + num2)  # Addition
+print(num1 - num2)  # Subtraction
+print(num1 * num2)  # Multiplication
+print(num1 / num2)  # Division
+print(num1 % num2)  # Modulus
+print(num1**num2)  # Exponentiation
 
-# comparison operators
-print(num1 == num2) # equal to
-print(num1 != num2) # not equal to
-print(num1 > num2) # greater than
-print(num1 < num2) # less than
-print(num1 >= num2) # greater than or equal to
-print(num1 <= num2) # less than or equal to
+# Comparison operators
+print(num1 == num2)  # Equal to
+print(num1 != num2)  # Not equal to
+print(num1 > num2)  # Greater than
+print(num1 < num2)  # Less than
+print(num1 >= num2)  # Greater than or equal to
+print(num1 <= num2)  # Less than or equal to
 
-# assignment operators
-num1 += num2 # num1 = num1 + num2
+# Assignment operators
+num1 += num2  # num1 = num1 + num2
 print(num1)
-num1 -= num2 # num1 = num1 - num2
+num1 -= num2  # num1 = num1 - num2
 print(num1)
-num1 *= num2 # num1 = num1 * num2
+num1 *= num2  # num1 = num1 * num2
 print(num1)
-num1 /= num2 # num1 = num1 / num2
-print(num1)     
-num1 %= num2 # num1 = num1 % num2
-print(num1)     
-num1 **= num2 # num1 = num1 ** num2
-print(num1)     
+num1 /= num2  # num1 = num1 / num2
+print(num1)
+num1 %= num2  # num1 = num1 % num2
+print(num1)
+num1 **= num2  # num1 = num1 ** num2
+print(num1)
 
-# logical operators
-print(num1 > num2 and num1 < 100) # logical AND
-print(num1 > num2 or num1 < 100) # logical OR
-print(not(num1 > num2)) # logical NOT
+# Logical operators
+print(num1 > num2 and num1 < 100)  # Logical AND
+print(num1 > num2 or num1 < 100)  # Logical OR
+print(not (num1 > num2))  # Logical NOT
 
-# type casting
+# Type casting
 num1 = "10"
 num2 = "20"
-print(int(num1) + int(num2)) # string to integer
-ans = int(5 + 10.5) # float to integer
+print(int(num1) + int(num2))  # String to integer
+ans = int(5 + 10.5)  # Float to integer
 print(ans)
 
-# taking user input
-name = input("enter your name: ")
+# Taking user input
+name = input("Enter your name: ")
 print(name)
-a = input("enter a number: ")
-b = input("enter another number: ")
-print(a + b) # this will concatenate the two strings
-print(int(a) + int(b)) # this will add the two numbers
+a = input("Enter a number: ")
+b = input("Enter another number: ")
+print(a + b)  # Concatenates the two strings.
+print(int(a) + int(b))  # Adds the two numbers.
 
-# calculate average of three numbers
-num1 = int(input("enter first number: "))
-num2 = int(input("enter second number: "))
-num3 = int(input("enter third number: "))
+# Calculate average of three numbers
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+num3 = int(input("Enter third number: "))
 average = (num1 + num2 + num3) / 3
-print("the average is:", average)
+print("The average is:", average)
